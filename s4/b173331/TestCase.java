@@ -69,6 +69,65 @@ public class TestCase {
 	    System.out.println("Exception occurred: STOP");
 	}
 
+    // テストケース追加
+    try {
+        FrequencerInterface  myObject;
+        int freq;
+        System.out.println("checking s4.b173331.Frequencer");
+        myObject = new s4.b173331.Frequencer();
+        myObject.setSpace("".getBytes());
+        myObject.setTarget("l".getBytes());
+        freq = myObject.frequency();
+        System.out.println("SPACE is not set:int frequency()="+freq);
+        if(0 == freq) { System.out.println("OK"); } else {System.out.println("WRONG"); }
+    }
+    catch(Exception e) {
+        System.out.println("Exception occurred: STOP");
+    }
+        
+    try {
+        FrequencerInterface  myObject;
+        int freq;
+        System.out.println("checking s4.b173331.Frequencer");
+        myObject = new s4.b173331.Frequencer();
+        myObject.setSpace("Hello World".getBytes());
+        myObject.setTarget("".getBytes());
+        freq = myObject.frequency();
+        System.out.println("TARGET is not set:int frequency()="+freq);
+        if(-1 == freq) { System.out.println("OK"); } else {System.out.println("WRONG"); }
+    }
+    catch(Exception e) {
+        System.out.println("Exception occurred: STOP");
+    }
+        
+    try {
+        InformationEstimatorInterface myObject;
+        double value;
+        myObject = new s4.b173331.InformationEstimator();
+        myObject.setSpace("3210321001230123".getBytes());
+        myObject.setTarget("".getBytes());
+        value = myObject.estimation();
+        System.out.println("target's length is 0:double estimation()="+value);
+    }
+    catch(Exception e) {
+        System.out.println("Exception occurred: STOP");
+    }
+        
+    try {
+        InformationEstimatorInterface myObject;
+        double value;
+        myObject = new s4.b173331.InformationEstimator();
+        myObject.setSpace("3210321001230123".getBytes());
+        value = myObject.estimation();
+        System.out.println("target is not set:double estimation()="+value);
+    }
+    catch(Exception e) {
+        System.out.println("Exception occurred: STOP");
+    }
+
+        
+        
+        
     }
 }	    
 	    
