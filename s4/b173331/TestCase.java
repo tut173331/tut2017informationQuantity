@@ -84,7 +84,7 @@ public class TestCase {
     catch(Exception e) {
         System.out.println("Exception occurred: STOP");
     }
-        
+   
     try {
         FrequencerInterface  myObject;
         int freq;
@@ -101,13 +101,24 @@ public class TestCase {
     }
         
     try {
+        FrequencerInterface myObject;
+        myObject = new s4.b173331.Frequencer();
+        int subFreq;
+        subFreq=myObject.subByteFrequency(1,5);
+        System.out.println("subByteFrequency="+subFreq);
+    }
+    catch(Exception e) {
+        System.out.println("Exception occurred: STOP");
+    }
+        
+    try {
         InformationEstimatorInterface myObject;
         double value;
         myObject = new s4.b173331.InformationEstimator();
         myObject.setSpace("3210321001230123".getBytes());
         myObject.setTarget("".getBytes());
         value = myObject.estimation();
-        System.out.println("target's length is 0:double estimation()="+value);
+        System.out.println("TARGET'S LENGTH is 0:double estimation()="+value);
     }
     catch(Exception e) {
         System.out.println("Exception occurred: STOP");
@@ -119,13 +130,13 @@ public class TestCase {
         myObject = new s4.b173331.InformationEstimator();
         myObject.setSpace("3210321001230123".getBytes());
         value = myObject.estimation();
-        System.out.println("target is not set:double estimation()="+value);
+        System.out.println("TARGET is not set:double estimation()="+value);
     }
     catch(Exception e) {
         System.out.println("Exception occurred: STOP");
     }
 
-        
+    
         
         
     }
