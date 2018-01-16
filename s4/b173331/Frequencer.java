@@ -49,7 +49,7 @@ public class Frequencer implements FrequencerInterface{
         }
         for(int i=0;i<space.length;i++){
             for(int j=i+1;j<space.length;j++){
-                if(suffixCompare(i,j)==1){//sort　ここを改良したら多少は計算時間はやくなりそう
+                if(suffixCompare(i,j)==1){//バブルsort　ここを改良したら多少は計算時間はやくなりそう
                     int tmp=suffixArray[i];
                     suffixArray[i]=suffixArray[j];
                     suffixArray[j]=tmp;
