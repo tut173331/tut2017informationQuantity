@@ -53,7 +53,7 @@ public class Frequencer implements FrequencerInterface{
             suffixArray[i] = i;
         }
         quick_sort(0,mySpace.length-1);
-        printSuffixArray();
+        //printSuffixArray();
     }
     
     public int part(int low,int high)
@@ -116,10 +116,7 @@ public class Frequencer implements FrequencerInterface{
 
         while(right-left>1){
             int mid=(left+right)/2;
-            /*System.out.println("mid="+mid);
-            System.out.println("left="+left);
-            System.out.println("right="+right);
-            System.out.println("======================");*/
+
             if(targetCompare(mid,start,end)==0)
             {
                 right=mid;
@@ -127,11 +124,7 @@ public class Frequencer implements FrequencerInterface{
                 //while(left<right){
                 while(right-left>1){
                     mid=(left+right)/2;
-                    /*System.out.println("mid="+mid);
-                    System.out.println("left="+left);
-                    System.out.println("right="+right);
-                    System.out.println("num="+num);
-                    System.out.println("--------------------------");*/
+       
                     if(targetCompare(mid,start,end)==0){
                         if(mid<num){
                             num=mid;
@@ -184,10 +177,7 @@ public class Frequencer implements FrequencerInterface{
         int right=mySpace.length-1;
         while(right-left>1){
             int mid=(left+right)/2;
-            /*System.out.println("mid="+mid);
-            System.out.println("left="+left);
-            System.out.println("right="+right);
-            System.out.println("======================");*/
+   
             if(targetCompare(mid,start,end)==0)
             {
                 left=mid;
@@ -195,11 +185,7 @@ public class Frequencer implements FrequencerInterface{
                 //while(left<right){
                 while(right-left>1){
                     mid=(left+right)/2;
-                    /*System.out.println("mid="+mid);
-                    System.out.println("left="+left);
-                    System.out.println("right="+right);
-                    System.out.println("num="+num);
-                    System.out.println("--------------------------");*/
+       
                     if(targetCompare(mid,start,end)==0){
                         if(mid>num){
                             num=mid;
@@ -215,11 +201,7 @@ public class Frequencer implements FrequencerInterface{
                         right=mid-1;
                     }
                 }
-                /*System.out.println("mid="+mid);
-                System.out.println("left="+left);
-                System.out.println("right="+right);
-                System.out.println("num="+num);
-                System.out.println("--------------------------");*/
+               
                 if(targetCompare(suffixArray.length-1,start,end)==0)
                     return suffixArray.length;
                 if(targetCompare(right,start,end)==0)
@@ -260,10 +242,10 @@ public class Frequencer implements FrequencerInterface{
         }
         int first = subByteStartIndex(start,end);
         int last1 = subByteEndIndex(start,end);
-        for(int k=start;k<end;k++){
+        /*for(int k=start;k<end;k++){
             System.out.write(myTarget[k]);
         }
-        System.out.printf(":first=%d last1=%d\n",first,last1);
+        System.out.printf(":first=%d last1=%d\n",first,last1);*/
         return last1-first;
     }
 
